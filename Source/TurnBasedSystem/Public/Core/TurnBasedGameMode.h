@@ -20,8 +20,15 @@ public:
 	
 	void StartTurn();
 
+	void AddUnit(ATurnBasedUnitBase* Unit);
+
+	void RemoveUnit(ATurnBasedUnitBase* Unit);
+
 private:
 	void ReadyNextTurn();
+
+	UPROPERTY()
+	TArray<ATurnBasedUnitBase*> Units;
 	
 	UPROPERTY()
 	TArray<ATurnBasedUnitBase*> TurnOrder;
